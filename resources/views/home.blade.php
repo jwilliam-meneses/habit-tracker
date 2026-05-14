@@ -1,32 +1,16 @@
-{{-- @dd($name, $habits) --}}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ config('app.name') }}</title>
 
-<h1>
-    Welcome to the home page
-</h1>
-
-<p>
-    Olá, {{ $name }}.
-</p>
-
-<p>
-    Seus hobbies são:
-</p>
-<ul>
-    @foreach ($habits as $habit)
-        <li>
-            {{ $habit }}
-        </li>
-    @endforeach
-</ul>
-
-@auth
-    <p>
-        Você está logado.
-    </p>
-@endauth
-
-@guest
-    <p>
-        Você não está logado.
-    </p>
-@endguest
+        @vite('resources/css/app.css')
+    </head>
+    <body>
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+    </body>
+</html>
